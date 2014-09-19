@@ -12,3 +12,7 @@ Bootstrap(<http://getbootstrap.com>) - used to make site look better.
 ## Browser support
 * Tested with Firefox 32 and chromium 37 on ubuntu 14.04
 * Other browsers on other platforms should work but are not tested.
+
+## Further notes
+* The code of this project is in a private github repository.
+* Search engine indexing of the live site has been disabled using robots.txt.
