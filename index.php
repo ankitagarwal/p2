@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="jumbotron">
-        <h1>XKCD style password generator</h1>
-        <p>This is an simple application that generates XKCD style passwords, based on various configurations.</p>
-        <p><img src="http://imgs.xkcd.com/comics/password_strength.png" class="img-responsive img-rounded" alt="xkcd password generator image"></p>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>XKCD style password generator</h1>
+            <p>This is an simple application that generates XKCD style passwords, based on various configurations.</p>
+            <p><img src="http://imgs.xkcd.com/comics/password_strength.png" class="img-responsive img-rounded" alt="xkcd password generator image"></p>
+        </div>
+        <?php require('form.php') ?>
     </div>
 </body>
 </html>
