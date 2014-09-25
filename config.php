@@ -13,3 +13,5 @@ define('SYMBOLS_DEFAULT', 4);
 define('SYMBOLS_MAX', 9);
 define('NUMBERS_DEFAULT', 4);
 define('NUMBERS_MAX', 9);
+
+define('PARAM_INTEGER', 1);
