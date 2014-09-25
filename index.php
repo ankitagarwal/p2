@@ -1,3 +1,14 @@
+<?php
+
+/**
+ * This file contains default configurations for the project.
+ *
+ * @copyright  2014 onwards Ankit Agarwal
+ */
+
+include_once('config.php'); // Include various configs.
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
