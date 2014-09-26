@@ -117,7 +117,55 @@ class passgen {
      * @return string
      */
     public function generate_password() {
-        return 'Test password';
+        $wordlist = array('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'); // Temp word list.
+        $words = array();
+        $password = '';
+        for($i = 0; $i < $this->wordcount ; $i++) {
+            $rand = rand(0, count($wordlist) - 1);
+            $words[] = $wordlist[$rand];
+        }
+
+        array_walk($words, 'self::get_formatted_word');
+
+        // Generate the extra password part containing symbols and numbers.
+        $extrapart = '';
+        for($i = 0 ; $i < $this->symbolcount; $i++) {
+            $rand = rand(34, 47); // Ascii range of special chars.
+            $extrapart .= chr($rand);
+        }
+        for($i = 0 ; $i < $this->numbercount; $i++) {
+            $extrapart .= rand(0, 9);
+        }
+        if (!empty($extrapart)) {
+            $words[] = $extrapart;
+        }
+
+        return implode('-', $words);
+    }
+
+    /**
+     * This methods formats the word list by reference based on the formatting options.
+     *
+     * @param string $word , a word to format.
+     */
+    protected function get_formatted_word(&$word) {
+        switch($this->formatting) {
+            case 1 :
+                // All lower case.
+                $word = strtolower($word);
+                return;
+            case 2:
+                // All uper case.
+                $word = strtoupper($word);
+                return;
+            case 3;
+                // Camel casing.
+                $word = ucfirst($word);
+                return;
+
+            default:
+                // Nothing to do.
+        }
     }
 
     /**
