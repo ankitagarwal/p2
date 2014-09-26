@@ -119,4 +119,19 @@ class passgen {
     public function generate_password() {
         return 'Test password';
     }
+
+    /**
+     * Magic get method.
+     *
+     * @param $prop
+     *
+     * @return mixed
+     * @throws Exception
+     */
+    public function __get($prop) {
+        if ($prop == 'wordcount' || $prop == 'symbolcount' || $prop == 'numbercount' || $prop == 'formatting') {
+            return $this->$prop;
+        }
+        throw new Exception("Invalid property: $prop");
+    }
 }
