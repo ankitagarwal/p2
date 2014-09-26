@@ -36,7 +36,7 @@ function clean_param($data , $type = PARAM_INTEGER) {
 function validate_param($data , $type = PARAM_INTEGER) {
     switch ($type) {
         case PARAM_INTEGER:
-            return is_int($data);
+            return is_numeric($data);
         default:
             return false;
     }

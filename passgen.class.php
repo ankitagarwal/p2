@@ -63,7 +63,7 @@ class passgen {
         }
         $this->symbolcount = $symbolcount;
 
-        // Get symbols count.
+        // Get number count.
         $numbercount = get_param_from_post('numbercount');
         $numbercount = $numbercount ? $numbercount : NUMBERS_DEFAULT; // Set default value if not supplied by user.
         if (!validate_param($numbercount)) {
@@ -97,5 +97,26 @@ class passgen {
      */
     public function get_errors() {
         return $this->errors;
+    }
+
+    /**
+     * Return an imploded list of errors seaprated by <br>
+     * @return string
+     */
+    public function get_errors_html() {
+        $html = '';
+        foreach ($this->errors as $error) {
+            $html .= $error . "<br />";
+        }
+        return $html;
+    }
+
+    /**
+     * generate and return password.
+     *
+     * @return string
+     */
+    public function generate_password() {
+        return 'Test password';
     }
 }

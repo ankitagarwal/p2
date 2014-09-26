@@ -9,9 +9,9 @@
 // Define constants.
 define('WORDS_DEFAULT', 4);
 define('WORDS_MAX', 9);
-define('SYMBOLS_DEFAULT', 4);
-define('SYMBOLS_MAX', 9);
-define('NUMBERS_DEFAULT', 4);
-define('NUMBERS_MAX', 9);
+define('SYMBOLS_DEFAULT', 0);
+define('SYMBOLS_MAX', 4);
+define('NUMBERS_DEFAULT', 0);
+define('NUMBERS_MAX', 4);
 
 define('PARAM_INTEGER', 1);

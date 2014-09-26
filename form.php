@@ -8,12 +8,12 @@
 
         <div class="form-group">
             <label for="symbolcount" class="col-sm-3">Enter the number of symbols (<?php echo 'Default: ' . SYMBOLS_DEFAULT . ' , max: ' . SYMBOLS_MAX ?>) </label>
-            <input type="text" name="symbolcount" placeholder=""<?php echo SYMBOLS_DEFAULT ?>"" >
+            <input type="text" name="symbolcount" placeholder="<?php echo SYMBOLS_DEFAULT ?>" >
         </div>
 
         <div class="form-group">
             <label for="numbercount" class="col-sm-3">Enter the number of numbers (<?php echo 'Default: ' . NUMBERS_DEFAULT . ' , max: ' . NUMBERS_MAX?>) </label>
-            <input type="text" name="numbercount" placeholder="<?php echo NUMBERS_DEFAULT ?> >
+            <input type="text" name="numbercount" placeholder="<?php echo NUMBERS_DEFAULT ?>" >
         </div>
 
         <div class="form-group">

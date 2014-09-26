@@ -6,16 +6,18 @@
  * @copyright  2014 onwards Ankit Agarwal
  */
 
-include_once('config.php'); // Include various configs.
+require_once('config.php'); // Include various configs.
+require_once('passgen.class.php');
+require_once('lib.php');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name='keywords' content='ankit agarwal, ankit, portfolio'>
-    <meta name='description' content='This page is a simple portfolio about Ankit Agarwal'>
-    <title>Ankit Agarwal's portfolio</title>
+    <meta name='keywords' content='xkcd, passowrd, xkcd password'>
+    <meta name='description' content='This page is a simple application to generate xkcd stlyes password'>
+    <title>xkcd password generator</title>
     <!-- Add bootsrap stuff -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -30,7 +32,21 @@ include_once('config.php'); // Include various configs.
             <p>This is an simple application that generates XKCD style passwords, based on various configurations.</p>
             <p><img src="http://imgs.xkcd.com/comics/password_strength.png" class="img-responsive img-rounded" alt="xkcd password generator image"></p>
         </div>
-        <?php require('form.php') ?>
+        <?php
+            if ($_POST) {
+                // If form has been submitted process the form and generate the password if needed.
+                $passgen = new passgen();
+                if ($errors = $passgen->get_errors()) {
+                    $html = $passgen->get_errors_html();
+                    echo '<div><p class="bg-danger"> ' .  $html . '</p></div>';
+                } else {
+                    // Everything good.
+                    $password = $passgen->generate_password();
+                    echo '<div><p class="bg-primary"> ' .  $password . '</p></div>';
+                }
+            }
+            require('form.php')
+        ?>
     </div>
 </body>
 </html>
