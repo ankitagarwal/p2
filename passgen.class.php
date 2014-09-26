@@ -41,11 +41,11 @@ class passgen {
         $wordcount = get_param_from_post('wordcount');
         $wordcount = $wordcount ? $wordcount : WORDS_DEFAULT; // Set default value if not supplied by user.
         if (!validate_param($wordcount)) {
-            $this->errors['wordcount'] = 'Invalid word count supplied';
+            $this->errors['wordcount'] = 'Invalid word count supplied.';
         } else {
             $wordcount = clean_param($wordcount);
             if ($wordcount > WORDS_MAX || $wordcount < 1) {
-                $this->errors['wordcount'] = 'Invalid word count supplied';
+                $this->errors['wordcount'] = 'Invalid word count supplied.';
             }
         }
         $this->wordcount = $wordcount;
@@ -54,11 +54,11 @@ class passgen {
         $symbolcount = get_param_from_post('symbolcount');
         $symbolcount = $symbolcount ? $symbolcount : SYMBOLS_DEFAULT; // Set default value if not supplied by user.
         if (!validate_param($symbolcount)) {
-            $this->errors['symbolcount'] = 'Invalid symbol count supplied';
+            $this->errors['symbolcount'] = 'Invalid symbol count supplied.';
         } else {
             $symbolcount = clean_param($symbolcount);
             if ($symbolcount > SYMBOLS_MAX || $symbolcount < 0) {
-                $this->errors['symbolcount'] = 'Invalid symbol count supplied';
+                $this->errors['symbolcount'] = 'Invalid symbol count supplied.';
             }
         }
         $this->symbolcount = $symbolcount;
@@ -67,11 +67,11 @@ class passgen {
         $numbercount = get_param_from_post('numbercount');
         $numbercount = $numbercount ? $numbercount : NUMBERS_DEFAULT; // Set default value if not supplied by user.
         if (!validate_param($numbercount)) {
-            $this->errors['numbercount'] = 'Invalid number count supplied';
+            $this->errors['numbercount'] = 'Invalid number count supplied.';
         } else {
             $numbercount = clean_param($numbercount);
             if ($numbercount > NUMBERS_MAX || $numbercount < 0) {
-                $this->errors['numbercount'] = 'Invalid number count supplied';
+                $this->errors['numbercount'] = 'Invalid number count supplied.';
             }
         }
         $this->numbercount = $numbercount;
@@ -80,11 +80,11 @@ class passgen {
         $formatting = get_param_from_post('formatting');
         $formatting = $formatting ? $formatting : 1; // Set default value if not supplied by user.
         if (!validate_param($formatting)) {
-            $this->errors['formatting'] = 'Invalid formatting supplied';
+            $this->errors['formatting'] = 'Invalid formatting supplied.';
         } else {
             $formatting = clean_param($formatting);
             if ($formatting > 3 || $formatting < 1) {
-                $this->errors['formatting'] = 'Invalid formatting supplied';
+                $this->errors['formatting'] = 'Invalid formatting supplied.';
             }
         }
         $this->formatting = $formatting;

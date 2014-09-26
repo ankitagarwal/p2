@@ -1,5 +1,5 @@
 <div>
-    <form id="xkcdconfig" action="index.php" method="post" class="form-horizontal">
+    <form id="xkcdconfig" action="index.php#feedback" method="post" class="form-horizontal">
         <div class="form-group">
             <label for="wordcount" class="col-sm-3"> Enter the number of words (<?php echo 'Default: ' . WORDS_DEFAULT . ' , max: ' . WORDS_MAX ?>)
             </label>

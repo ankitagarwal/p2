@@ -38,11 +38,11 @@ require_once('lib.php');
                 $passgen = new passgen();
                 if ($errors = $passgen->get_errors()) {
                     $html = $passgen->get_errors_html();
-                    echo '<div><p class="bg-danger"> ' .  $html . '</p></div>';
+                    echo '<div id=feedback><p class="bg-danger text-danger text-large"> ' .  $html . '</p></div>';
                 } else {
                     // Everything good.
                     $password = $passgen->generate_password();
-                    echo '<div><p class="bg-primary"> ' .  $password . '</p></div>';
+                    echo '<div id=feedback><p class="bg-primary"> ' .  $password . '</p></div>';
                 }
             }
             require('form.php')
