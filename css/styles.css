@@ -1,3 +1,22 @@
 .text-danger{
-    font-size: large;
+    font-size: x-large;
+}
+.text-password{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.bg-errors{
+    border: solid 1em #2b542c;
+    background-color: #2b542c;
+    padding: 0.1em;
+    color: white;
+}
+.bg-password{
+    border: solid 1em #398439;
+    background-color: #398439;
+    padding: 0.1em;
+    color: white;
+}
+#xkcdconfig{
+    padding: 1em;
 }
