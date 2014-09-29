@@ -5,7 +5,7 @@
                 Enter the number of words (<?php echo 'Default: ' . WORDS_DEFAULT . ' , max: ' . WORDS_MAX ?>)
             </label>
             <input type="text" name="wordcount" placeholder="<?php echo WORDS_DEFAULT ?>"
-                <?php echo (isset($_POST) ? "value=$passgen->wordcount" : '') ?> >
+                <?php echo ((isset($_POST) && !isset($errors['wordcount'])) ? "value=$passgen->wordcount" : '') ?> >
         </div>
 
         <div class="form-group">
@@ -13,7 +13,7 @@
                 Enter the number of symbols (<?php echo 'Default: ' . SYMBOLS_DEFAULT . ' , max: ' . SYMBOLS_MAX ?>)
             </label>
             <input type="text" name="symbolcount" placeholder="<?php echo SYMBOLS_DEFAULT ?>"
-                <?php echo (isset($_POST) ? "value=$passgen->symbolcount" : '') ?> >
+                <?php echo ((isset($_POST)&& !isset($errors['symbolcount'])) ? "value=$passgen->symbolcount" : '') ?> >
         </div>
 
         <div class="form-group">
@@ -21,7 +21,7 @@
                 Enter the number of numbers (<?php echo 'Default: ' . NUMBERS_DEFAULT . ' , max: ' . NUMBERS_MAX?>)
             </label>
             <input type="text" name="numbercount" placeholder="<?php echo NUMBERS_DEFAULT ?>"
-                <?php echo (isset($_POST) ? "value=$passgen->numbercount" : '') ?> >
+                <?php echo ((isset($_POST) && !isset($errors['numbercount'])) ? "value=$passgen->numbercount" : '') ?> >
         </div>
 
         <div class="form-group">
