@@ -117,7 +117,7 @@ class passgen {
      * @return string
      */
     public function generate_password() {
-        $wordlist = array('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'); // Temp word list.
+        $wordlist = self::get_words();
         $words = array();
         $password = '';
         for($i = 0; $i < $this->wordcount ; $i++) {
@@ -181,5 +181,20 @@ class passgen {
             return $this->$prop;
         }
         throw new Exception("Invalid property: $prop");
+    }
+
+    /**
+     * Get words list from our cached list.
+     *
+     * @return array|mixed
+     */
+    protected static function get_words() {
+        if ($cont = file_get_contents('wordlist')) {
+            if ($words = json_decode($cont)) {
+                return $words;
+            }
+        }
+
+        return array('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'); // Just in case.
     }
 }
