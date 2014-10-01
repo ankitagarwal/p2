@@ -31,9 +31,9 @@
             <input type="radio" name="formatting" value="1"
                 <?php echo ((isset($_POST) && $passgen->formatting == 1) ? 'checked="checked"' : '') ?>> all lower case
             <input type="radio" name="formatting" value="2"
-                <?php echo ((isset($_POST) && $passgen->formatting == 2) ? 'checked="checked"' : '') ?>> ALL UPER CASE
+                <?php echo ((isset($_POST) && $passgen->formatting == 2) ? 'checked="checked"' : '') ?>> ALL UPPER CASE
             <input type="radio" name="formatting" value="3"
-                <?php echo ((isset($_POST) && $passgen->formatting == 3) ? 'checked="checked"' : '') ?>> Came Case
+                <?php echo ((isset($_POST) && $passgen->formatting == 3) ? 'checked="checked"' : '') ?>> Camel Case
         </div>
 
         <button type="submit" class="btn btn-default col-sm-offset-2">Generate password</button>
