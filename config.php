@@ -15,3 +15,4 @@ define('NUMBERS_DEFAULT', 0);
 define('NUMBERS_MAX', 4);
 
 define('PARAM_INTEGER', 1);
+define('ROOTPATH', "/var/www/html/p2/");
